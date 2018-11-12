@@ -9,17 +9,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashScreenActivity extends AppCompatActivity {
     Animation anim;
     ImageView iv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash_screen);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i=new Intent(SplashActivity.this, ScreenSignActivity.class);
+                Intent i=new Intent(SplashScreenActivity.this, ScreenSignActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -27,7 +27,6 @@ public class SplashActivity extends AppCompatActivity {
         iv=findViewById(R.id.iv_logo);
         anim= AnimationUtils.loadAnimation(this, R.anim.anim);
         iv.setAnimation(anim);
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();//Ẩn Action bar
     }
