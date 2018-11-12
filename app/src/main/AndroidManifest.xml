@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".SplashActivity" />
         <activity android:name=".ScreenSignActivity" />
-        <activity android:name=".StoreDetailActivity"></activity>
+        <activity android:name=".StoreDetailActivity" />
+        <activity android:name=".DealsActivity"></activity>
     </application>
 
 </manifest>
