@@ -22,8 +22,9 @@
         <activity android:name=".ScreenSignActivity" />
         <activity android:name=".StoreDetailActivity" />
         <activity android:name=".DealsActivity" />
-        <activity android:name=".ListDealActivity" />
-        <activity android:name=".ProfileUserActivity"></activity>
+        <activity android:name=".ProfileUserActivity">
+
+        </activity>
     </application>
 
 </manifest>
