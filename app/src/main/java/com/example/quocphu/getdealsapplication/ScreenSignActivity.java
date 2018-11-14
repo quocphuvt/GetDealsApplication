@@ -53,7 +53,6 @@ public class ScreenSignActivity extends AppCompatActivity {
     private LoginButton loginButton;
     private ImageView iv;
     private TextView tv_test;
-    ProfilePictureView profilePictureView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,7 +109,6 @@ public class ScreenSignActivity extends AppCompatActivity {
         super.onStart();
         // Kiểm tra nếu user google đã đăng nhập thì làm gì.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-
         Toast.makeText(this, "User signing", Toast.LENGTH_SHORT).show();
 
     }
@@ -151,6 +149,7 @@ public class ScreenSignActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(ScreenSignActivity.this, "signInWithCredential:success", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
+
 
                         } else {
                             // If sign in fails, display a message to the user.

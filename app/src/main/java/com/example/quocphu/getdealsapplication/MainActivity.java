@@ -27,6 +27,7 @@ import android.widget.Toolbar;
 
 import com.example.quocphu.getdealsapplication.model.Store;
 import com.example.quocphu.getdealsapplication.model.User;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     TabItem tab_map,tab_store,tab_deal;
     ViewPager vPager;
     FrameLayout flContent;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,6 +129,19 @@ public class MainActivity extends AppCompatActivity {
         Class classFragment = null;
         if(item.getItemId()==R.id.myprofile){
             classFragment = MapFragment.class;
+            flContent.setVisibility(View.VISIBLE);
+        }
+        if(item.getItemId()==R.id.mydeals){
+            classFragment = MapFragment.class;
+            flContent.setVisibility(View.VISIBLE);
+        }
+        if(item.getItemId()==R.id.myfavorite){
+            classFragment = MapFragment.class;
+            flContent.setVisibility(View.VISIBLE);
+        }
+        if(item.getItemId()==R.id.logout){
+            startActivity(new Intent(this,ScreenSignActivity.class));
+            firebaseAuth.getInstance().signOut();
             flContent.setVisibility(View.VISIBLE);
         }
         try {
