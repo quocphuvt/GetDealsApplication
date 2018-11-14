@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="137dp"
+        android:layout_marginLeft="20dp"
+        app:srcCompat="@drawable/store_detail" />
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STORE: NGUYEN KIM"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADDRESS: 197, NAM KY KHOI NGHIA, Q3, TP.HCM"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCATION: 11.12313,13.1234"
+            android:textSize="15dp"/>
+
+        <Button
+            android:layout_width="116dp"
+            android:layout_height="44dp"
+            android:background="@drawable/btn_store_detail_activity"
+            android:text="See on map"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#19683B" />
+
+    </LinearLayout>
+
+</LinearLayout>
